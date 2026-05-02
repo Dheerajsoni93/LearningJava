@@ -1,3 +1,5 @@
+package Java_Basics;
+
 import java.sql.SQLOutput;
 
 public class Variables {
