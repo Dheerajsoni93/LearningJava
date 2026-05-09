@@ -21,6 +21,8 @@ public class LoopsInJava {
         for (int i = 0; i < 10; ++i){
             System.out.print(i + ", ");
         }
+        //break - to break the loop
+        //continue - skip the current iteration and jump to next
 
 //        do-while loop
         int number;
