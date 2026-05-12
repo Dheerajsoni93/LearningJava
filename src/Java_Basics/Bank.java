@@ -55,9 +55,8 @@ public class Bank {
 
     static double withdraw(double balance){
         double amount;
-        System.out.println("Enter the amount");
+        System.out.print("Enter the amount");
         amount = scanner.nextDouble();
-
         if(amount < 0){
             System.out.println("Amount can't be negative!");
             return balance;
