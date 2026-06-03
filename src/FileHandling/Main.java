@@ -1,11 +1,9 @@
 package FileHandling;
 
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         // How to write a file using Java (4 popular options)
 
         // FileWriter = Good for small or medium-sized text files
@@ -24,5 +22,27 @@ public class Main {
         catch (IOException e){
             System.out.println("Could not write file!");
         }
+
+
+
+        //How to read a file
+
+        // How to read a file using Java (3 popular options)
+
+        // BufferedReader + FileReader: Best for reading text files line-by-line
+        // FileInputStream: Best for binary files (e.g., images, audio files)
+        // RandomAccessFile: Best for read/write specific portions of a large file
+
+       try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
+           System.out.println("That file exists.");
+           String line;
+           while((line = reader.readLine()) != null ){
+               System.out.println(line);
+           }
+       } catch (FileNotFoundException e){
+           System.out.println("Could not locate file.");
+       } catch (Exception e) {
+           System.out.println("Something went wrong!");
+       }
     }
 }
